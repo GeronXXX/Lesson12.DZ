@@ -18,20 +18,20 @@ public class LambdaTest {
     @DisplayName("2. Лямбда шаги через step (name, () -> {})")
     @Test
     public void testLambda() {
-        step("Открываем главную страницу", () -> {
+        step("Opening the main page", () -> {
             open("https://github.com/");
         });
-        step("Ищем репозиторий" + Repository, () -> {
+        step("Looking for a repository" + Repository, () -> {
             headerSearchInput.setValue(Repository);
             headerSearchInput.pressEnter();
         });
-        step("Кликаем по найденному репозиторию", () -> {
+        step("Click on the found repository", () -> {
             repository.click();
         });
-        step("Кликаем по вкладке Issues", () -> {
+        step("Click on the Issues tab", () -> {
             IssuesTab.click();
         });
-        step("Проверка текста на странице Issues", () -> {
+        step("Checking text on the Issues page", () -> {
             VerificationText.shouldHave(text("Welcome to issues!"));
         });
     }
