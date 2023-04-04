@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -22,6 +23,8 @@ public class SelenideListener {
         $(".header-search-input").pressEnter() ;
         $(".f4.text-normal").click();
         $("#issues-tab").click();
+
+        $(".container-md").shouldHave(text("Welcome to issues!"));
     }
     @AfterAll
     static void after() {
