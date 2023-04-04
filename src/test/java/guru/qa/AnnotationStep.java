@@ -16,5 +16,6 @@ public class AnnotationStep {
         step.repository(Repository);
         step.issuesTab();
         step.verificationText(Text);
+        step.takeScreenshot();
     }
 }
