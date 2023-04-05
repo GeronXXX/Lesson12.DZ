@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SelenideListener {
-    @DisplayName("Тест - 1. Чистый Selenide (с Listener)")
+    @DisplayName("Test - 1. Pure Selenide (with Listener)")
     @Test
     public void testSelenideListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());

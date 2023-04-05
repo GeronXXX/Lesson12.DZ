@@ -13,24 +13,24 @@ import static org.openqa.selenium.By.linkText;
 
 public class PageObgects {
 
-    @Step("Открываем главную страницу")
+    @Step("Opening the main page")
     public void openMainPage() {
         open("https://github.com");
     }
-    @Step("Ищем репозиторий")
+    @Step("Looking for a repository")
     public void searchForRepository(String repo) {
         $(".header-search-input").setValue(repo);
         $(".header-search-input").pressEnter();
     }
-    @Step("Кликаем по найденному репозиторию")
+    @Step("Click on the found repository")
     public void repository(String repo) {
         $(linkText(repo)).click();
     }
-    @Step("Кликаем по вкладке Issues")
+    @Step("Click on the Issues tab")
     public void issuesTab() {
         $("#issues-tab").click();
     }
-    @Step("Проверка текста на странице Issues")
+    @Step("Checking text on the Issues page")
     public void verificationText(String repo) {
         $(".container-md").shouldHave(text(repo));
     }

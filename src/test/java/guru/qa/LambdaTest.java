@@ -15,7 +15,7 @@ public class LambdaTest {
    private static final SelenideElement repository = $(linkText(Repository));
    private static final SelenideElement IssuesTab = $("#issues-tab");
    private static final SelenideElement VerificationText  = $(".container-md");
-    @DisplayName("2. Лямбда шаги через step (name, () -> {})")
+    @DisplayName("2. Lambda steps through step (name, () -> {})")
     @Test
     public void testLambda() {
         step("Opening the main page", () -> {

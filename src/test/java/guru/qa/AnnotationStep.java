@@ -7,7 +7,7 @@ public class AnnotationStep {
     private static final String Repository = "GeronXXX/Lesson10.Files";
     private static final String Text = "Welcome to issues!";
 
-    @DisplayName("3. Шаги с аннотацией @Step")
+    @DisplayName("3. Steps with @Step annotation")
     @Test
     public void testAnnotatedStep() {
         PageObgects step = new PageObgects();
