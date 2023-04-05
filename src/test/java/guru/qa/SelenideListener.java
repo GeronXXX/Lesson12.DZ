@@ -25,9 +25,4 @@ public class SelenideListener {
 
         $(".container-md").shouldHave(text("Welcome to issues!"));
     }
-    @AfterAll
-    static void after() {
-        Configuration.holdBrowserOpen = true;
-    }
-
 }
